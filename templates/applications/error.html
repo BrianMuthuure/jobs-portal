@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+    <div class="card col-md-6">
+        <div class="link-to-jobs p-4">
+            <p class="text-danger">We are sorry , you applied for this job. Please check for other available jobs..!!!!</p>
+            <small class="text-muted">
+                <a href="{% url 'main:jobs' %}">Go Back To Jobs</a>
+            </small>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

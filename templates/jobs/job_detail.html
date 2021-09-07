@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="job-detail card">
+    <div class="row justify-content-center p-4">
+        <div class="col-md-3 mt-4">
+            <img src="{{ job.employer.logo.url }}" class="rounded-circle detail-img">
+        </div>
+        <div class="col-md-6 mt-4">
+            <h2 class="text-uppercase">{{ job.employer}}</h2>
+            <h3>{{job.name}}</h3>
+            <div class="qualifications">
+                {% for qualification in qualifications %}
+                <p>{{ forloop.counter }}. {{qualification.title}}</p>
+                {% endfor %}
+            </div>
+             {% for group in user.groups.all %}
+             {% if group.name == 'Employers' %}
+            <div class="buttons mt-4">
+
+                <a href="{% url 'main:add-qualification' job.id %}" class="btn btn-success">Update Qualifications</a>
+                <a href="{% url 'main:update-job' job.id %}" class="btn btn-primary">Update Job</a>
+                <a href="{% url 'main:delete-job' job.pk %}" class="btn btn-danger">Delete Job</a>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+             {% for group in user.groups.all %}
+             {% if group.name == 'Clients' %}
+            <div class="buttons mt-4">
+                <a href="{% url 'main:apply' job.pk %}" class="btn btn-success">Quick Apply</a>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

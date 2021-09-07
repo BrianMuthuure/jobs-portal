@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="job-list">
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Jobs</h2><hr>
+        </div>
+        <div class="col-md-4">
+            {% include 'search/search_form.html' %}
+        </div>
+    </div>
+    {% for job in jobs %}
+    <div class="row justify-content-center mt-4">
+            <div class="col-md-3 ">
+                <a href="{{ job.get_absolute_url }}">
+                    <img src="{{ job.employer.logo.url }}" class="rounded-circle account-img">
+                </a>
+            </div>
+            <div class="col-md-6">
+                <h3>{{ forloop.counter }}. Company:
+                    {{ job.employer }}
+                </h3><hr>
+                <h4>Position:
+                    <a href="{{ job.get_absolute_url }}">{{ job.name }}</a>
+                </h4>
+                <small class="text-muted">{{ job.date_posted }}</small>
+            </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

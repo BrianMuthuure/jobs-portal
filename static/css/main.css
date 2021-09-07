@@ -1,0 +1,129 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins', sans-serif;
+}
+
+a{
+text-decoration:none;
+}
+
+h1{
+font-size:2.5rem;
+font-weight:700;
+}
+
+h2{
+font-size:1.8rem;
+font-weight:600;
+}
+
+h3{
+font-size:1.4rem;
+font-weight:800;
+}
+
+h4{
+font-size:1.1rem;
+font-size:600;
+}
+
+h5{
+font-size:1rem;
+font-weight:400;
+color:#1d1d1d;
+}
+
+h6{
+color:#dbdbdb;
+}
+
+.navbar{
+font-size:16px;
+top:0;
+left:0;
+box-shadow:0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-light .navbar-nav .nav-link{
+padding:0 20px;
+font-size:1.1em;
+letter-spacing:2px;
+color:black !important;
+transition:0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+color:coral !important;
+top:0;
+left:0;
+}
+.navbar i:hover{
+color:coral !important;
+top:0;
+left:0;
+}
+
+.navbar i{
+font-size: 1.2rem;
+padding: 0 7px;
+cursor: pointer;
+font-weight: 500;
+transition: 0.3s ease;
+}
+.navbar-nav{
+margin-left:auto !important;
+}
+
+.logo {
+font-size: 32px;
+margin: 0;
+padding: 0;
+line-height: 1;
+font-weight: 600;
+letter-spacing: 0.8px;
+font-family: "Poppins", sans-serif;
+}
+
+.logo a {
+color: coral;
+}
+
+.logo a span {
+color: #106eea;
+}
+
+hr{
+width: 40px;
+height: 3px !important;
+font-weight:bold;
+background-color: #106eea;
+}
+
+.card{
+border-radius:5px !important;
+box-shadow:0 1px 11px 0 rgba(0, 0, 0, 0.12) !important;
+border: none !important;
+margin-bottom: 30px;
+margin-top:30px;
+}
+/*  Profile  */
+.account-img{
+height: 125px;
+width:125px;
+margin-right:20px;
+margin-bottom:16px;
+}
+.detail-img{
+height: 225px;
+width:225px;
+margin-right:20px;
+margin-bottom:16px;
+}
+.job-list h4{
+letter-spacing:2px;
+}

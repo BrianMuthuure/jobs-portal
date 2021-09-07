@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Homepage</h1>
+<a href="{% url 'main:add-employer'%}">Register Employer</a><br>
+<a href="{% url 'main:create-job'%}">Add Jobs</a><br>
+<a href="{% url 'main:jobs' %}">Jobs</a>
+<i class="las la-battery-three-quarters"></i>
+<h1>{{ request.user }}</h1>
+
+{% endblock %}

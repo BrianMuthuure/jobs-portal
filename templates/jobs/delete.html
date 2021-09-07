@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="content-section">
+    <form method="post">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <h3>Delete Job</h3><hr>
+            <h4>Are you sure you want to delete the job "{{ object.name }}"</h4>
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-danger" type="submit">Yes, Delete</button>
+            <a href="{% url 'main:job-detail' job.pk %}" class="btn btn-outline-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
